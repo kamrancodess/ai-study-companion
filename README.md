@@ -15,6 +15,35 @@ Free, local-first AI-powered Study Companion with a FastAPI backend and a Next.j
 - Topic clustering with scikit-learn
 - Streamlit legacy app still available in `backend/app.py`
 
+## Why This Project Is Useful
+
+AI Study Companion turns static study material into an active learning system. Instead of only reading PDFs, students can ask questions, get summaries, practice quizzes, discover weak topics, follow a study plan, and track progress from one dashboard.
+
+This is useful for:
+
+- Students preparing for exams from long PDFs, lecture notes, and unit-wise material
+- Portfolio projects that demonstrate real AI engineering, not only UI design
+- Learning RAG, embeddings, OCR, SQLite, analytics, recommendation systems, and ML workflows
+- Building a local-first AI app without paid APIs or cloud costs
+- Creating a foundation for future SaaS features such as user accounts, hosted storage, and advanced model serving
+
+## App Sections
+
+- Dashboard: Shows a quick overview of indexed documents, quiz attempts, accuracy, study minutes, weak topics, and revision priorities.
+- Upload Notes: Lets users upload PDF study material. The backend extracts text, uses OCR for scanned PDFs when available, chunks the content, and prepares it for search and AI features.
+- AI Tutor: Works like a study mentor. Users can ask broad questions across the available study material and get grounded answers from the local knowledge base.
+- PDF Q&A: Lets users select a specific PDF and ask document-based questions with source snippets and page references.
+- Smart Summarizer: Generates whole-document summaries or chunk-wise topic summaries for faster revision.
+- Quiz Generator: Creates MCQs and short-answer questions from study material, grades responses, and stores performance history.
+- Weak Topic Analysis: Finds topics where quiz accuracy is low and highlights what needs revision.
+- Study Planner: Builds a weekly study plan based on weak areas and recommended revision tasks.
+- Recommendations: Suggests what to study next using quiz results, weak topics, and study activity.
+- Topic Clustering: Groups related chunks and concepts using ML clustering so users can understand how topics are connected.
+- Analytics Dashboard: Visualizes accuracy, attempts, progress, and learning performance over time.
+- Flashcards: Provides spaced-repetition style review cards generated from the indexed material.
+- Progress Tracker: Tracks study consistency, completed activities, and improvement signals.
+- Settings: Keeps app-level controls and configuration space for future features.
+
 ## Screenshots and Demo
 
 ![AI Study Companion dashboard](docs/media/dashboard.png)

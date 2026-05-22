@@ -15,6 +15,21 @@ Free, local-first AI-powered Study Companion with a FastAPI backend and a Next.j
 - Topic clustering with scikit-learn
 - Streamlit legacy app still available in `backend/app.py`
 
+## Screenshots and Demo
+
+![AI Study Companion dashboard](docs/media/dashboard.png)
+
+![AI Study Companion demo walkthrough](docs/media/demo-walkthrough.gif)
+
+More screenshots:
+
+- [Upload Notes](docs/media/upload-notes.png)
+- [AI Tutor](docs/media/ai-tutor.png)
+- [PDF Q&A](docs/media/pdf-qa.png)
+- [Quiz Generator](docs/media/quiz-generator.png)
+- [Analytics Dashboard](docs/media/analytics-dashboard.png)
+- [Topic Clustering](docs/media/topic-clustering.png)
+
 ## Run Locally
 
 Backend:

@@ -13,14 +13,14 @@ Free, local-first AI-powered Study Companion with a FastAPI backend and a Next.j
 - 120-question demo quiz bank
 - Weak-topic analytics and recommendation logic
 - Topic clustering with scikit-learn
-- Streamlit legacy app still available in `app.py`
+- Streamlit legacy app still available in `backend/app.py`
 
 ## Run Locally
 
 Backend:
 
 ```powershell
-cd C:\Users\ibrah\Downloads\b_HUDWK5qTByF\ai_study_companion
+cd C:\Users\ibrah\Downloads\b_HUDWK5qTByF\ai_study_companion\backend
 python -m uvicorn api_server:app --host 127.0.0.1 --port 8000
 ```
 
@@ -53,6 +53,7 @@ http://127.0.0.1:8000/health
 ## Install
 
 ```powershell
+cd backend
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
@@ -78,37 +79,38 @@ C:\Program Files\Tesseract-OCR\tesseract.exe
 - `GET /recommendations`
 - `POST /study-sessions`
 
-## Backend Structure
+## Project Structure
 
 ```text
 ai_study_companion/
-  api_server.py                  FastAPI app and REST endpoints
-  app.py                         Legacy Streamlit app
+  backend/                       FastAPI backend
+    api_server.py                FastAPI app and REST endpoints
+    app.py                       Legacy Streamlit app
+    requirements.txt             Python dependencies
+    docs/
+      ARCHITECTURE.md            Architecture and ML workflow
+      DEPLOYMENT.md              Free deployment notes
+    study_companion/
+      analytics.py               Dashboard metrics and charts
+      config.py                  Paths, model names, runtime settings
+      database.py                SQLite schema and data access
+      demo_data.py               ML Unit 1-5 demo seed data
+      embeddings.py              Retrieval vectors and search
+      flashcards.py              Flashcard generation helpers
+      ml_models.py               Weak-topic classifier and clustering
+      pdf_processing.py          PDF extraction and OCR fallback
+      quiz.py                    MCQ and short-answer generation
+      rag.py                     Retrieval-augmented answering
+      recommender.py             Recommendations and weekly plans
+      summarizer.py              Local summarization fallback
+      text_processing.py         Cleaning, chunking, keywords
+      ui.py                      Legacy Streamlit UI helpers
   frontend/                      Next.js frontend
     app/                         App router pages and global CSS
     components/                  Dashboard, sections, and UI components
     lib/                         Frontend API client and utilities
     public/                      Static assets
     package.json                 Frontend dependencies and scripts
-  requirements.txt               Python dependencies
-  docs/
-    ARCHITECTURE.md              Architecture and ML workflow
-    DEPLOYMENT.md                Free deployment notes
-  study_companion/
-    analytics.py                 Dashboard metrics and charts
-    config.py                    Paths, model names, runtime settings
-    database.py                  SQLite schema and data access
-    demo_data.py                 ML Unit 1-5 demo seed data
-    embeddings.py                Retrieval vectors and search
-    flashcards.py                Flashcard generation helpers
-    ml_models.py                 Weak-topic classifier and clustering
-    pdf_processing.py            PDF extraction and OCR fallback
-    quiz.py                      MCQ and short-answer generation
-    rag.py                       Retrieval-augmented answering
-    recommender.py               Recommendations and weekly plans
-    summarizer.py                Local summarization fallback
-    text_processing.py           Cleaning, chunking, keywords
-    ui.py                        Legacy Streamlit UI helpers
 ```
 
 ## Notes

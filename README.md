@@ -1,6 +1,6 @@
-# AI Study Companion Backend
+# AI Study Companion
 
-Free, local-first AI/ML backend for an AI-powered Study Companion. It supports PDF ingestion, OCR fallback, RAG question answering, summaries, quiz generation, weak-topic detection, recommendations, analytics, flashcards, topic clustering, and seeded demo data.
+Free, local-first AI-powered Study Companion with a FastAPI backend and a Next.js frontend. It supports PDF ingestion, OCR fallback, RAG question answering, summaries, quiz generation, weak-topic detection, recommendations, analytics, flashcards, topic clustering, and seeded demo data.
 
 ## Features
 
@@ -17,9 +17,25 @@ Free, local-first AI/ML backend for an AI-powered Study Companion. It supports P
 
 ## Run Locally
 
+Backend:
+
 ```powershell
 cd C:\Users\ibrah\Downloads\b_HUDWK5qTByF\ai_study_companion
 python -m uvicorn api_server:app --host 127.0.0.1 --port 8000
+```
+
+Frontend:
+
+```powershell
+cd C:\Users\ibrah\Downloads\b_HUDWK5qTByF\ai_study_companion\frontend
+npm install
+npm run dev
+```
+
+App URL:
+
+```text
+http://127.0.0.1:3000
 ```
 
 Backend URL:
@@ -68,6 +84,12 @@ C:\Program Files\Tesseract-OCR\tesseract.exe
 ai_study_companion/
   api_server.py                  FastAPI app and REST endpoints
   app.py                         Legacy Streamlit app
+  frontend/                      Next.js frontend
+    app/                         App router pages and global CSS
+    components/                  Dashboard, sections, and UI components
+    lib/                         Frontend API client and utilities
+    public/                      Static assets
+    package.json                 Frontend dependencies and scripts
   requirements.txt               Python dependencies
   docs/
     ARCHITECTURE.md              Architecture and ML workflow

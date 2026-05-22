@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Study Companion
 
 AI Study Companion is a free, local-first Streamlit application for students who want to learn from their own PDFs and notes. It implements Phase 2 features: RAG question answering, AI summaries, quiz generation, weak-topic detection, study recommendations, analytics, and topic clustering without paid APIs.
@@ -106,3 +107,7 @@ The first run may download HuggingFace models. That is still free, but it needs 
 ## Deployment Workflow
 
 Local-first is the main target. For free deployment, push this folder to GitHub and deploy on Streamlit Community Cloud. Use a small model and commit only code, not local `data/`, model caches, or uploaded PDFs.
+=======
+# ai-study-companion
+AI-powered Study Companion using RAG, ML, NLP, and recommendation systems.
+>>>>>>> 2130fc51aeb6934a4d7e215362bdab781fdc00c9
